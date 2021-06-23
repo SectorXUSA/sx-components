@@ -33,9 +33,9 @@
 </button-->
 <button bind:this={button} class:button on:click={toggle}>
 	{#if visible}
-		?
-	{:else}
 		✖
+	{:else}
+		?
 	{/if}
 </button>
 

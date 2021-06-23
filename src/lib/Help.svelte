@@ -3,6 +3,8 @@
 <script>
 	import { Markdown } from './';
 
+	export let src;
+
 	export let visible = false;
 
 	let button;
@@ -17,20 +19,22 @@
 {#if visible}
 	<div bind:this={mask} class:mask on:click={toggle}>
 		<div bind:this={content} class:content class="markdown-body" on:click|stopPropagation>
-			<Markdown>
-				<slot />
-			</Markdown>
+			<Markdown {src}/>
 		</div>
 	</div>
 {/if}
 
 <button bind:this={button} class:button class="material-icons-outlined" on:click={toggle}>
-	{visible ? 'clear' : 'info'}
+	{#if visible}
+		&#xE14C;
+	{:else}
+		&#xE88E;
+	{/if}
 </button>
 
 <style>
-	@import 'https://fonts.googleapis.com/icon?family=Material+Icons+Outlined';
-	@import 'https://unpkg.com/github-markdown-css@4.0.0/github-markdown.css';
+	@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+	@import url('https://unpkg.com/github-markdown-css@4.0.0/github-markdown.css');
 
 	.button {
 		font-size: 4rem;
@@ -47,6 +51,8 @@
 		margin-top: 1rem;
 		margin-right: 1rem;
 		padding: 0;
+		width: 4rem;
+		aspect-ratio: 1/1;
 	}
 
 	.mask {

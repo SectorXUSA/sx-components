@@ -4,8 +4,7 @@
 	import { Markdown } from './';
 
 	export let src;
-
-	export let visible = false;
+	export let visible;
 
 	let button;
 	let mask;

@@ -3,7 +3,7 @@
 <script>
 	import { Markdown } from './';
 
-	export let visible;
+	export let visible = false;
 
 	let button;
 	let mask;

@@ -24,16 +24,23 @@
 	</div>
 {/if}
 
-<button bind:this={button} class:button class="material-icons-outlined" on:click={toggle}>
+<!--button bind:this={button} class:button class="material-icons-outlined" on:click={toggle}>
 	{#if visible}
 		&#xE14C;
 	{:else}
 		&#xE88E;
 	{/if}
+</button-->
+<button bind:this={button} class:button on:click={toggle}>
+	{#if visible}
+		?
+	{:else}
+		✖
+	{/if}
 </button>
 
 <style>
-	@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+	/*@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');*/
 	@import url('https://unpkg.com/github-markdown-css@4.0.0/github-markdown.css');
 
 	.button {
@@ -51,7 +58,7 @@
 		margin-top: 1rem;
 		margin-right: 1rem;
 		padding: 0;
-		width: 4rem;
+		width: 6rem;
 		aspect-ratio: 1/1;
 	}
 

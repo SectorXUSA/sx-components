@@ -1,9 +1,9 @@
 <script>
-	import { Help } from "./lib";
+	import "../dist/sx-components.es"
 </script>
 
 <!-- prettier-ignore -->
-<Help src={`
+<sx-help src={`
 # AR Tank
 ### by Sector X
 
@@ -11,3 +11,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet dui
 
 Nullam consequat nibh dignissim, condimentum mauris eget, efficitur ante. Donec auctor enim in mollis varius. Nam scelerisque malesuada mi sed porta. Morbi volutpat lorem at lacinia ullamcorper. Quisque eget ornare urna. Suspendisse in pharetra ligula. Quisque vitae lacus ac urna facilisis viverra. Curabitur rhoncus, lacus quis gravida convallis, velit diam tempus eros, non pellentesque mi orci non ipsum.
 `} visible/>
+
+<style>
+	:global(body) {
+		background: magenta;
+	}
+</style>

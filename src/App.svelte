@@ -1,9 +1,9 @@
 <script>
-	import "../dist/sx-components.es.js";
+	import { Help } from "./lib";
 </script>
 
 <!-- prettier-ignore -->
-<sx-help src={`
+<Help src={`
 # AR Tank
 ### by Sector X
 

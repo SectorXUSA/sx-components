@@ -30,25 +30,11 @@
 		&#xE88E;
 	{/if}
 </button-->
-<button bind:this={button} class:button on:click={toggle}>
-	{#if visible}
-		✖
-	{:else}
-		?
-	{/if}
-</button>
+<a bind:this={button} class:button href="#" on:click={toggle}>Help</a>
 
 <style>
 	/*@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');*/
 	@import url('https://unpkg.com/github-markdown-css@4.0.0/github-markdown.css');
-
-	.button {
-		font-size: 4rem;
-		background: white;
-		border-radius: 100%;
-		border: none;
-		outline: none;
-	}
 
 	.button {
 		position: fixed;
@@ -56,9 +42,6 @@
 		right: 0;
 		margin-top: 1rem;
 		margin-right: 1rem;
-		padding: 0;
-		width: 6rem;
-		aspect-ratio: 1/1;
 	}
 
 	.mask {
